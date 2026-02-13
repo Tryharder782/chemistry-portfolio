@@ -1,0 +1,9 @@
+.mobileOffset {
+  /* desktop/tablet */
+}
+
+@media (max-width: 1024px) {
+  .mobileOffset {
+    transform: translateY(28px);
+  }
+}

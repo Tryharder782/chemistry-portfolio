@@ -1,0 +1,9 @@
+.homeButton {
+  /* desktop/tablet default */
+}
+
+@media (max-width: 1024px) {
+  .homeButton {
+    transform: translateY(28px);
+  }
+}

@@ -1,0 +1,25 @@
+{
+   "framework": "create-react-app",
+   "outputDirectory": "build",
+   "buildCommand": "CI=false react-scripts build",
+   "headers": [
+      {
+         "source": "/",
+         "headers": [
+            {
+               "key": "Cache-Control",
+               "value": "no-store, no-cache, must-revalidate, proxy-revalidate"
+            }
+         ]
+      },
+      {
+         "source": "/acids/(.*)",
+         "headers": [
+            {
+               "key": "Cache-Control",
+               "value": "no-store, no-cache, must-revalidate, proxy-revalidate"
+            }
+         ]
+      }
+   ]
+}
