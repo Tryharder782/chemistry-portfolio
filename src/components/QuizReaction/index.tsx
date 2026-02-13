@@ -4,8 +4,6 @@ import { createPortal } from 'react-dom'
 import styles from './styles.module.scss'
 import Buttons from '../Buttons/Buttons'
 import { convertExpToHtml, getItemsRandomlyFromArray, getStorage, setStorage } from '../../helper/functions'
-import useAppData from '../../hooks/useAppData'
-import useFunctions from '../../hooks/useFunctions'
 import { QuizAnswerType, QuizItemType } from '../../helper/types'
 import QuestionStep from './QuestionStep'
 import QuestionDifficulty from './QuestionDifficulty'
@@ -59,11 +57,6 @@ const QuizReaction = ({
     return () => window.removeEventListener('resize', calc)
   }, [])
 
-  const {
-    updatePageFromMenu,
-    getNextMenu,
-  } = useFunctions()
-
   useEffect(() => {
     loadQuizData()
   }, [])
@@ -102,7 +95,7 @@ const QuizReaction = ({
         if (nextRoute) {
           navigate(nextRoute)
         } else {
-          updatePageFromMenu(getNextMenu(1), false)
+          navigate('/acids/chapters')
         }
       }
       return
@@ -114,7 +107,7 @@ const QuizReaction = ({
       if (prevRoute) {
         navigate(prevRoute)
       } else {
-        updatePageFromMenu(getNextMenu(-1), false)
+        navigate('/acids/chapters')
       }
       return
     }
@@ -224,14 +217,14 @@ const QuizReaction = ({
               if (nextRoute) {
                 navigate(nextRoute)
               } else {
-                updatePageFromMenu(getNextMenu(1), false)
+                navigate('/acids/chapters')
               }
             })}
             onTouchEnd={(event) => runTapTouch(event, () => {
               if (nextRoute) {
                 navigate(nextRoute)
               } else {
-                updatePageFromMenu(getNextMenu(1), false)
+                navigate('/acids/chapters')
               }
             })}
           >
