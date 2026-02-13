@@ -56,7 +56,7 @@ export function ChaptersMenu({ isOpen, onToggle, onClose }: ChaptersMenuProps) {
                className="absolute right-0 top-8 w-64 bg-white rounded-lg shadow-xl py-2 z-[100] text-sm"
                style={{ border: '1px solid #e5e7eb' }}
             >
-               {/* Reaction Rates */}
+               {/* Additional chapter links */}
                <div className="px-4 py-2 flex items-center justify-between text-gray-800 hover:bg-gray-50 cursor-pointer">
                   <span>Reaction rates</span>
                   <ChevronRight className="w-4 h-4 text-gray-400" />

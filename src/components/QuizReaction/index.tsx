@@ -300,7 +300,7 @@ const QuizReaction = ({
     )
   }
 
-  // For ReactionRates quizzes, render without scaling layout (they use CommonLayout)
+  // Acids quizzes keep the same responsive layout container.
   return <>
     {quizControls}
     {quizContent}
